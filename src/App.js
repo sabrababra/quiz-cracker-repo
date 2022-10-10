@@ -6,6 +6,8 @@ import Home from './component/Home/Home';
 import Main from './component/layout/Main';
 import Quiz from './component/Quiz/Quiz';
 import Statics from './component/Statics/Statics';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -50,6 +52,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
