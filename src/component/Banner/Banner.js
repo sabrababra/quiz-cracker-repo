@@ -5,8 +5,8 @@ const Banner = () => {
     return (
         <div className='my-5 row align-item-center justify-content-between'>
            <div className='col-12 col-lg-5'>
-            <h1>Lorem ipsum </h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id laboriosam culpa, asperiores soluta debitis totam non pariatur veniam suscipit numquam tenetur ad a velit. Recusandae natus iste ut corporis voluptate.</p>
+            <h1>Test your skill </h1>
+            <p>These three themes are that quizzes can be used to motivate people, help them remember content they just covered, and to help assess what they learned.</p>
             </div> 
             <div className='col-12 col-lg-3'>
             <img className='banner-img' src={quiz} alt="" />
