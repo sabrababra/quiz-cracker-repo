@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import 'swiper/css';
 import Blog from './component/Blog/Blog';
 import Home from './component/Home/Home';
 import Main from './component/layout/Main';
+import Quiz from './component/Quiz/Quiz';
 import Statics from './component/Statics/Statics';
 
 
@@ -33,6 +35,14 @@ function App() {
         {
           path:'/statics',
           element:<Statics></Statics>
+        },
+        {
+          path:'/quiz/:quizId',
+          loader:({params})=>{
+            return fetch(` https://openapi.programming-hero.com/api/quiz/${params.quizId}`);
+            
+          },
+          element:<Quiz></Quiz>
         }
       ]
     }

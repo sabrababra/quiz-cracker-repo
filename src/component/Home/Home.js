@@ -12,7 +12,7 @@ const Home = () => {
             <div className='mt-5'>
             <Banner></Banner>
             </div>
-            <Row xs={1} md={2} lg={4} className="g-4 mt-5 ">
+            <Row xs={1} md={2} lg={4} className="g-4 my-5 ">
             {
                 quizes.map(quiz=><QuizDetail
                 key={quiz.id}
