@@ -6,10 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import Question from '../Question/Question';
 const Quiz = () => {
     const quizQstn=useLoaderData().data;
     console.log(quizQstn);
-    const {name,total,logo}=quizQstn;
+    const {name,total,logo,questions}=quizQstn;
     return (
         <div className='container'>
             <div className='my-5 d-flex align-item-center justify-content-between'>
@@ -18,7 +19,7 @@ const Quiz = () => {
             <p>Total Question: {total}</p>
             </div> 
             <div>
-            <img className='banner-img' src={logo} alt="" />
+            <img className='quiz-img' src={logo} alt="" />
             </div>
         </div>
         {/* slider */}
@@ -31,15 +32,17 @@ const Quiz = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {
+            questions.map(question=><SwiperSlide key={question.id}>
+                    <Question
+                        
+                        questionData={question}
+                    ></Question>
+                </SwiperSlide>
+            )
+        }
+        
+
       </Swiper>
         </div>
 
