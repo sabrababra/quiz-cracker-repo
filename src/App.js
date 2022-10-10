@@ -8,6 +8,7 @@ import Quiz from './component/Quiz/Quiz';
 import Statics from './component/Statics/Statics';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NotFound from './component/NotFound/NotFound';
 
 
 function App() {
@@ -47,7 +48,9 @@ function App() {
           element:<Quiz></Quiz>
         }
       ]
-    }
+
+    },
+    {path:'*',element:<NotFound></NotFound>}
   ])
   return (
     <div className="App">
