@@ -10,7 +10,7 @@ const QuizDetail = ({quiz}) => {
     return (
         <div>
         <Col >
-          <Card >
+          <Card className='card-shadow'>
             <Card.Img className='card-img ' variant="top" src={logo} />
             <Card.Body>
               <Card.Title>{name}</Card.Title>

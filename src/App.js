@@ -56,7 +56,7 @@ function App() {
     {path:'*',element:<NotFound></NotFound>}
   ])
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer></ToastContainer>
     </div>

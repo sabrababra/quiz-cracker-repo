@@ -8,7 +8,7 @@ const Statics = () => {
     const data = useLoaderData();
     const quizes = data.data;
     return (
-        <div className='container'>
+        <div style={{height:'80vh'}} className='container'>
             <h3 className='text-center my-4'>Quiz Chart</h3>
             <Row xs={1} lg={3} className='gy-4'>
                 <Col>

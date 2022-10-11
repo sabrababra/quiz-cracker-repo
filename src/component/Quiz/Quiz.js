@@ -33,7 +33,7 @@ const Quiz = () => {
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
-            className="mySwiper shadow"
+            className="mySwiper shadow mb-5"
           >
             {
                 questions?.map(question=><SwiperSlide key={question.id}>
