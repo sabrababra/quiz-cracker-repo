@@ -36,9 +36,9 @@ const Quiz = () => {
             className="mySwiper shadow mb-5"
           >
             {
-                questions?.map(question=><SwiperSlide key={question.id}>
+                questions?.map((question,index)=><SwiperSlide key={question.id}>
                         <Question
-                            
+                            index={index}
                             questionData={question}
                         ></Question>
                     </SwiperSlide>
