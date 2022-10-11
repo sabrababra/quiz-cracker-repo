@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import './Statics.css';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Legend, Bar, AreaChart, Area, PieChart, Pie } from 'recharts';
+import {  CartesianGrid, XAxis, YAxis, Tooltip,  BarChart, Legend, Bar, AreaChart, Area, PieChart, Pie } from 'recharts';
 
 const Statics = () => {
     const data = useLoaderData();

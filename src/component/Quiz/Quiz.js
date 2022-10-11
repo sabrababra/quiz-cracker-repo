@@ -16,7 +16,7 @@ const Quiz = () => {
         <>
             {
                 quizQstn?.name ? <div className='container'>
-                <div className='my-5 row align-item-center justify-content-between'>
+                <div className='my-3 row align-item-center justify-content-between'>
                <div  className='col-12 col-lg-5 my-auto'>
                 <h1>Quiz Topic: {name} </h1>
                 <p>Total Question: {total}</p>
@@ -33,7 +33,7 @@ const Quiz = () => {
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
-            className="mySwiper"
+            className="mySwiper shadow"
           >
             {
                 questions?.map(question=><SwiperSlide key={question.id}>

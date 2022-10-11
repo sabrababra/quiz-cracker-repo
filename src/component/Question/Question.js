@@ -18,12 +18,13 @@ const Question = ({questionData}) => {
             <div className='row align-items-center'>
             <h3 className='col-10'>{question} </h3>
 
-            <IoEyeSharp onClick={notify} className='col-2 fs-2'></IoEyeSharp>
+            <IoEyeSharp onClick={notify} className='col-2 fs-1'></IoEyeSharp>
             </div>
             <Row xs={1} md={2} className='g-4 my-3'>
                 {
                     options.map((option,index)=><Col key={index}>
-                            <button onClick={()=>handleCorrectAns(option)} className='btn btn-outline-info p-3'> {option} </button>
+                            <input type="radio" name="option" onClick={()=>handleCorrectAns(option)} /> {option} 
+                            {/* <button onClick={()=>handleCorrectAns(option)} className='btn btn-outline-info p-3'> {option} </button> */}
                         </Col>)
                 }
             </Row>
